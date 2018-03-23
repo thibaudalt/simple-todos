@@ -68,8 +68,7 @@ li {
     }
   }
   &.private {
-    background: $white;
-    border-color: #ddd;
+    background-color: rgba(255, 255, 255, 0.25);
   }
 }
 
@@ -98,7 +97,7 @@ li {
   font-weight: normal;
 }
 
-.toggle-private { margin-left: 5px; }
+.toggle-private { margin-left: 5px; color: $white !important; }
 ::-webkit-input-placeholder { color: $white; }
 
 .container {
@@ -210,6 +209,7 @@ li {
   font-size: 1em;
   border: none;
   position: relative;
+  color: $red;
 }
 
 @keyframes breathing {
