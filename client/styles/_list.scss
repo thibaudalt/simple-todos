@@ -1,0 +1,150 @@
+body {
+  font-family: sans-serif;
+  background-color: $blue;
+  background-image: linear-gradient(to bottom, $blue, $teal 100%);
+  background-attachment: fixed;
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  margin: 0; padding: 0;
+  font-size: 14px;
+}
+
+header {
+  padding: 27px;
+  position: relative;
+  text-align: center;
+  margin: 20px auto;
+  width: 200px;
+  height: 75px;
+  -webkit-transform: skew(-30deg);
+  -moz-transform: skew(-30deg);
+  -o-transform: skew(-30deg);
+  background: $white;
+  .hide-completed { float: right; }
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0;
+  display: inline-block;
+  color: $teal;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Helvetica Neue';
+  -webkit-transform: skew(30deg);
+  -moz-transform: skew(30deg);
+  -o-transform: skew(30deg);
+}
+
+form {
+  margin-top: 15px;
+  position: relative;
+  color: $white;
+  color: $white;
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid $white;
+}
+
+li {
+  position: relative;
+  list-style: none;
+  padding: 15px;
+  border-bottom: $white solid 1px;
+  color: $white;
+  .text { margin-left: 10px; }
+  &.checked {
+    color: $cyan;
+    .text { text-decoration: line-through; }
+    .checkmark {
+      background-color: $cyan;
+      &:after { display: block; }
+    }
+  }
+  &.private {
+    background: $white;
+    border-color: #ddd;
+  }
+}
+
+#login-buttons { display: block; }
+.toggle-private { margin-left: 5px; }
+::-webkit-input-placeholder { color: $white; }
+
+.container {
+  max-width: 600px;
+  margin-top: 50px;
+  min-height: 100%;
+}
+
+.new-task input {
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  animation: breathing 7s ease-out infinite normal;
+  -webkit-font-smoothing: antialiased;
+  &:focus { outline: 0; animation: none; }
+}
+
+.form-check-input {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 19px; left: 15px;
+  height: 12px;
+  width: 12px;
+  background-color: $white;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid $white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+}
+
+.delete {
+  float: right;
+  font-weight: bold;
+  background: none;
+  font-size: 1em;
+  border: none;
+  position: relative;
+}
+
+@keyframes breathing {
+  0% { font-size: 1em; }
+  25% { font-size: 1.25em; }
+  60% { font-size: 1em; }
+  100% { font-size: 1em; }
+}
+
+@media (max-width: 600px) {
+  li { padding: 12px 15px; }
+  .new-task input { padding-bottom: 5px; }
+  .search {
+    width: 150px;
+    clear: both;
+  }
+}
