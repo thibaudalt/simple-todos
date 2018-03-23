@@ -60,7 +60,7 @@ li {
   .text { margin-left: 10px; }
   &.checked {
     color: $cyan;
-    light { color: $cyan; }
+    .light { color: $cyan; }
     .text { text-decoration: line-through; }
     .checkmark {
       background-color: $cyan;
@@ -71,11 +71,6 @@ li {
     background: $white;
     border-color: #ddd;
   }
-}
-
-light {
-  color: #ddd;
-  font-weight: normal;
 }
 
 #login-buttons {
@@ -96,6 +91,11 @@ light {
 
 .text {
   font-weight: bold;
+}
+
+.light {
+  color: #ddd;
+  font-weight: normal;
 }
 
 .toggle-private { margin-left: 5px; }
