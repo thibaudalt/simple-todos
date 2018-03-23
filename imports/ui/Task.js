@@ -25,7 +25,7 @@ export default class Task extends Component {
         <button className="delete" onClick={this.deleteThisTask.bind(this)}>&times;</button>
         <span className="checkmark"></span>
         <input className="form-check-input" type ="checkbox" readOnly checked ={!!this.props.task.checked} onClick ={this.toggleChecked.bind(this)} />
-        <span className="text">{this.props.task.text}</span>
+        <span className="text">{this.props.task.text}<light>{this.props.task.username ? ' - ':''}{this.props.task.username}</light></span>
       </li>
     );
   }

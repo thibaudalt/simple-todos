@@ -60,6 +60,7 @@ li {
   .text { margin-left: 10px; }
   &.checked {
     color: $cyan;
+    light { color: $cyan; }
     .text { text-decoration: line-through; }
     .checkmark {
       background-color: $cyan;
@@ -72,7 +73,31 @@ li {
   }
 }
 
-#login-buttons { display: block; }
+light {
+  color: #ddd;
+  font-weight: normal;
+}
+
+#login-buttons {
+  display: block;
+  .login-link-and-dropdown-list { position: static; }
+}
+
+#login-dropdown-list {
+  border-radius: 0;
+  border: 0;
+  top: 120px;
+  left: 27px;
+  width: 100%;
+  max-width: 570px;
+  a { color: $black; }
+  form > div { max-width: 70%; }
+}
+
+.text {
+  font-weight: bold;
+}
+
 .toggle-private { margin-left: 5px; }
 ::-webkit-input-placeholder { color: $white; }
 
@@ -80,6 +105,60 @@ li {
   max-width: 600px;
   margin-top: 50px;
   min-height: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border-radius: 2px;
+  font-weight: bold;
+  border: 0;
+  float: right;
+}
+
+.btn-group-toggle {
+  display: inline-block;
+  width: 100%;
+  input[type='checkbox'] { display: none; }
+
+  span {
+    float: right;
+    margin-right: 5px;
+    padding: 6px 12px;
+    background-color: #286090;
+    border-radius: 2px;
+    height: 32px;
+    @extend .btn;
+
+    a {
+      margin-top: 4px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none !important;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #204d74;
+    }
+
+  }
+
 }
 
 .new-task input {
